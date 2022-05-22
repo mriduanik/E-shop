@@ -37,5 +37,17 @@ urlpatterns = [
                   path('cart/cart_clear/', views.cart_clear, name='cart_clear'),
                   path('cart/cart-detail/', views.cart_detail, name='cart_detail'),
                   path('contact_us', views.Contact_Page, name='contact_page'),
+                  # Checkout page
+
+                  path('checkout/', views.Checkout, name='checkout'),
+
+                  # ordr page
+                  path('order/', views.Your_order, name='order'),
+                  # product page
+                  path('product/', views.Product_page, name='product'),
+                  # product deitls
+                  path('product/<str:id>', views.Product_detail, name='product_detail'),
+                  # search  page
+                  path('search/', views.Search, name='search'),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
